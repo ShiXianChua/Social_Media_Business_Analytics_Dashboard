@@ -1,0 +1,33 @@
+{% extends "sidebar.html" %}
+
+{% block content %}
+<div class="jumbotron" style="margin-bottom:0; background-color:#daebf7; padding:2rem 2rem">
+    <form action="/set_user_profile" method="post" enctype="multipart/form-data">
+        <div class="form-group">
+            <label for="exampleInputImage1">Profile Picture</label><br>
+            <input type="file" name="picture">
+        </div>
+        <div class="form-group">
+            <label for="exampleInputName1">Name</label>
+            <input type="text" class="form-control" name="username" placeholder="Edit your name" value="{{pre_username}}">
+        </div>
+        <div class="form-group">
+            <label for="exampleInputGender1">Gender</label>
+            <input type="radio" id="male" class="form-control" name="gender" value="Male" required checked>
+            <label for="male">Male</label><br>
+            <input type="radio" id="female" class="form-control" name="gender" value="Female">
+            <label for="female">Female</label><br>
+        </div>
+        <div class="form-group">
+            <label for="exampleInputContactNumber1">Contact Number</label>
+            <input type="text" class="form-control" name="contact_num" placeholder="Edit your contact number" value="{{pre_contact_num}}">
+        </div>
+        <div class="form-group">
+            <label for="exampleInputAddress1">Address</label>
+            <textarea class="form-control" name="address" placeholder="Edit your address" rows="4" cols="50">{{pre_address}}</textarea>
+        </div>
+        <button type="submit" name="submit" class="btn btn-primary">Save</button>
+    </form>
+</div>
+
+{% endblock %}

@@ -1,0 +1,15 @@
+{% extends "sidebar.html" %}
+
+{% block content %}
+<div class="jumbotron" style="margin-bottom:0; background-color:#daebf7; padding:2rem 2rem">
+    <div>Profile Picture</div>
+    <div><img src="{{profile_pic}}" width="200px" height="200px"></div>
+    <div>Email Address: {{email}}</div>
+    <div>Username: {{username}}</div>
+    <div>Gender: {{gender}}</div>
+    <div>Contact Number: {{contact_num}}</div>
+    <div>Address: {{address}}</div>
+    <a href="/set_user_profile" class="btn btn-primary">Edit Profile</a>
+</div>
+
+{% endblock %}

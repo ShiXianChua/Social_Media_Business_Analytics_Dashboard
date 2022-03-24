@@ -1,0 +1,13 @@
+{% extends "sidebar.html" %}
+
+{% block content %}
+<div class="jumbotron" style="margin-bottom:0; background-color:#daebf7; padding:2rem 2rem; text-align:center;">
+    <div style="margin:50px"><img src="../static/img/analytics.png" alt=""></div>
+    <h5 style="margin:30px"><b>Click <a href="http://127.0.0.1:8051/" target="_blank">here</a> to proceed to our
+        analytics. A new tab will be opened. Click the Run button and then reload the tab.</b></h5>
+    <form action="/pa_prep_insta" method="post">
+        <button type="submit" name="submit" class="btn btn-primary">Run</button>
+    </form>
+</div>
+
+{% endblock %}

@@ -1,0 +1,35 @@
+{% extends "sidebar.html" %}
+
+{% block content %}
+<div class="jumbotron" style="margin-bottom:0; background-color:#daebf7; padding:2rem 2rem">
+    <h2><b>Influencer Analytics: Getting the Influencer Data</b></h2>
+    {% if reminder1 and reminder2 and reminder3 %}
+    <div class="alert alert-secondary">
+        {{ reminder1 }}
+        {{ reminder2 }}<br>
+        {{ reminder3 }}
+    </div>
+    {% endif %}
+    {% if umessage1 and umessage2 %}
+    <div class="alert alert-danger toggleVis">
+        {{ umessage1 }}<br>
+        {{ umessage2 }}
+    </div>
+    {% endif %}
+    <form action="/ia_scrap" method="post">
+        <div class="form-group">
+            <label for="exampleInputAddress1">Influencers</label>
+            <textarea class="form-control" name="influencer_name" placeholder="Fill in names of influencers here" rows="4" cols="50"></textarea>
+        </div>
+        <button type="submit" name="submit" class="btn btn-primary">Run</button>
+    </form>
+    <div><span>*Click the Next button if you already have a data file and would like to skip this step.</span></div>
+    <div style="text-align:right"><a href="/ia_prep" class="btn btn-primary">Next</a></div>
+</div>
+
+<script>
+
+</script>
+
+{% endblock %}
+
